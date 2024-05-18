@@ -51,3 +51,45 @@ tabParent.onclick = (event) => {
     }
 }
 
+const card = document.querySelector(".card")
+const xhr = new XMLHttpRequest()
+xhr.open('GET', '../data/person.json', true)
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        const response = JSON.parse(xhr.responseText)
+        console.log(response)
+    }
+}
+xhr.send()
+// const name = ""
+// const color_hair = ""
+// const color_eyes = ""
+// const hair_length = ""
+// const name_japan = ""
+// const panteon = ""
+// const weapon = ""
+// const person_photo = ""
+// card.addEventListener('click', function() {
+//     // Perform your action here
+//     console.log('Card clicked');
+
+//     const xhr = new XMLHttpRequest();
+//     xhr.open('POST', '../data/person.json', true);
+//     xhr.setRequestHeader('Content-Type', 'application/json');
+//     xhr.onreadystatechange = function () {
+//         if (xhr.readyState === 4 && xhr.status === 200) {
+//             console.log('POST request successful');
+//         }
+//     };
+
+//     const data = JSON.stringify({
+//         name,
+//         color_hair,
+//         color_eyes,
+//         hair_length,
+//         name_japan,
+//         panteon,
+//         weapon
+//     });
+//     xhr.send(data);
+// });
