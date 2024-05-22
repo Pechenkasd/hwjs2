@@ -50,17 +50,21 @@ tabParent.onclick = (event) => {
         })
     }
 }
-
 const card = document.querySelector(".card")
-const xhr = new XMLHttpRequest()
-xhr.open('GET', '../data/person.json', true)
-xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-        const response = JSON.parse(xhr.responseText)
-        console.log(response)
-    }
+const request = new XMLHttpRequest()
+request.open('GET', '../data/person.json')
+request.setRequestHeader("Content-Type", "application/json")
+request.send()
+request.onload = () => {
+    const response = JSON.parse(request.responseText)
+    response.forEach((GOD, PEOPLE) => {
+        const wrapper = document.createElement('div')
+        wrapper.setAttribute('class', 'card')
+        wrapper.innerHTML =
+            card.append(wrapper)
+    })
 }
-xhr.send()
+
 // const name = ""
 // const color_hair = ""
 // const color_eyes = ""
@@ -93,3 +97,44 @@ xhr.send()
 //     });
 //     xhr.send(data);
 // });
+// converter
+const usdInput = document.querySelector('#usd')
+const somInput = document.querySelector('#som')
+const euroInput = document.querySelector('#eur')
+
+const convertor = (element, targetElement, targetElement2) => {
+    element.oninput = () => {
+        const request = new XMLHttpRequest()
+        request.open('GET', '../data/converter.json')
+        request.setRequestHeader('Content-type', 'application/json')
+        request.send()
+        request.onload = () => {
+            const data = JSON.parse(request.response)
+            if (element.id === 'som') {
+                targetElement.value = (element.value / data.usd).toFixed(2)
+                targetElement2.value = (element.value / data.euro).toFixed(2)
+            } if (element.id === 'usd') {
+                targetElement.value = (element.value * data.usd).toFixed(2)
+                targetElement2.value = (element.value / data.euroToDollar).toFixed(2)
+            } if (element.id === 'eur') {
+                targetElement.value = (element.value * data.euro).toFixed(2)
+                targetElement2.value = (element.value * data.euroToDollar).toFixed(2)
+            }
+            (element.value === '') && (targetElement.value = '', targetElement2.value = '')
+        }
+    }
+}
+convertor(somInput, usdInput, euroInput)
+convertor(usdInput, somInput, euroInput)
+convertor(euroInput, somInput, usdInput)
+
+// somInput.oninput = () => {
+//     const request = new XMLHttpRequest()
+//     request.open('GET', '../data/converter.json')
+//     request.setRequestHeader('CONTENT-TYPE', 'application/json')
+//     request.send()
+//     request.onload = () => {
+//         const data = JSON.parse(request.request)
+//         usdInput.value = (somInput.value / data.usd).toFixed('2')
+//     }
+// }
