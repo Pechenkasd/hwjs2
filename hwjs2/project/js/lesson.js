@@ -50,20 +50,11 @@ tabParent.onclick = (event) => {
         })
     }
 }
-const card = document.querySelector(".card")
 const request = new XMLHttpRequest()
 request.open('GET', '../data/person.json')
 request.setRequestHeader("Content-Type", "application/json")
 request.send()
-request.onload = () => {
-    const response = JSON.parse(request.responseText)
-    response.forEach((GOD, PEOPLE) => {
-        const wrapper = document.createElement('div')
-        wrapper.setAttribute('class', 'card')
-        wrapper.innerHTML =
-            card.append(wrapper)
-    })
-}
+
 
 // const name = ""
 // const color_hair = ""
@@ -128,13 +119,33 @@ convertor(somInput, usdInput, euroInput)
 convertor(usdInput, somInput, euroInput)
 convertor(euroInput, somInput, usdInput)
 
-// somInput.oninput = () => {
-//     const request = new XMLHttpRequest()
-//     request.open('GET', '../data/converter.json')
-//     request.setRequestHeader('CONTENT-TYPE', 'application/json')
-//     request.send()
-//     request.onload = () => {
-//         const data = JSON.parse(request.request)
-//         usdInput.value = (somInput.value / data.usd).toFixed('2')
-//     }
-// }
+const card = document.querySelector('.card')
+const btnPrev = document.querySelector('#btn-prev')
+const btnNext = document.querySelector('#btn-next')
+let  currentCardId = 1 
+
+const updateCard = (cardId) => {
+    fetch(`https://jsonplaceholder.typicode.com/todos/${cardId}`)
+    .then(response => response.json())
+    .then(data => {
+        card.innerHTML = `
+        <p>${data.title}</p>
+        <p style="color:${data.completed ? 'green' : 'red'}">${data.completed}</p>
+        <span>${data.id}</span>
+    `
+})
+}
+btnNext.onclick = () => {
+    currentCardId = currentCardId < 200 ? currentCardId + 1 : 1
+    updateCard(currentCardId)
+}
+
+btnPrev.onclick = () => {
+    currentCardId = currentCardId > 1 ? currentCardId - 1 : 200
+    updateCard(currentCardId)
+}
+updateCard(currentCardId)
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+.then(response => response.json())
+.then(data => console.log(data))
