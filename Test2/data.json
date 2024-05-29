@@ -1,0 +1,31 @@
+[{
+    "name": "Jonn",
+    "age": 24,
+    "city": " Bishkek",
+    "isMarined": false,
+    "country": "Kyrgystan",
+    "money": null,
+    "height": 1.8 ,
+    "favoriteColors": ["red", "green", "blue"]
+
+},
+{
+    "name": "Jake",
+    "age": 10,
+    "city": " Bishkek",
+    "isMarined": false,
+    "country": "Russia",
+    "money": null,
+    "height": 1.8 ,
+    "favoriteColors": ["purple", "pink", "red"]
+},
+{
+    "name": "Jill",
+    "age": 20,
+    "city": " Bishkek",
+    "isMarined": false,
+    "country": "Kyrgystan",
+    "money": null,
+    "height": 1.8 ,
+    "favoriteColors": ["grey", "pink", "green"]
+}]
