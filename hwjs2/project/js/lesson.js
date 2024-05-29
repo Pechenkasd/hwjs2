@@ -50,12 +50,17 @@ tabParent.onclick = (event) => {
         })
     }
 }
-const request = new XMLHttpRequest()
-request.open('GET', '../data/person.json')
-request.setRequestHeader("Content-Type", "application/json")
-request.send()
-
-
+const godAndPeople = async() =>{
+    try{
+        const response = await fetch('../data/person.json')
+        const data = await response.json()
+        // console.log(data)
+    }
+    catch(error){
+        console.log(error)
+    }
+}
+godAndPeople()
 // const name = ""
 // const color_hair = ""
 // const color_eyes = ""
@@ -95,24 +100,30 @@ const euroInput = document.querySelector('#eur')
 
 const convertor = (element, targetElement, targetElement2) => {
     element.oninput = () => {
-        const request = new XMLHttpRequest()
-        request.open('GET', '../data/converter.json')
-        request.setRequestHeader('Content-type', 'application/json')
-        request.send()
-        request.onload = () => {
-            const data = JSON.parse(request.response)
-            if (element.id === 'som') {
-                targetElement.value = (element.value / data.usd).toFixed(2)
-                targetElement2.value = (element.value / data.euro).toFixed(2)
-            } if (element.id === 'usd') {
-                targetElement.value = (element.value * data.usd).toFixed(2)
-                targetElement2.value = (element.value / data.euroToDollar).toFixed(2)
-            } if (element.id === 'eur') {
-                targetElement.value = (element.value * data.euro).toFixed(2)
-                targetElement2.value = (element.value * data.euroToDollar).toFixed(2)
+        const visionCash = async () => {
+            try {
+                const response = await fetch('../data/converter.json')
+                const data = await response.json()
+                if (element.id === 'som') {
+                    targetElement.value = (element.value / data.usd).toFixed(2)
+                    targetElement2.value = (element.value / data.euro).toFixed(2)
+                } else if (element.id === 'usd') {
+                    targetElement.value = (element.value * data.usd).toFixed(2)
+                    targetElement2.value = (element.value / data.euroToDollar).toFixed(2)
+                } else if (element.id === 'eur') {
+                    targetElement.value = (element.value * data.euro).toFixed(2)
+                    targetElement2.value = (element.value * data.euroToDollar).toFixed(2)
+                }
+
+                if (element.value === '') {
+                    targetElement.value = ''
+                    targetElement2.value = ''
+                }
+            } catch (error) {
+                console.log(error)
             }
-            (element.value === '') && (targetElement.value = '', targetElement2.value = '')
         }
+        visionCash()
     }
 }
 convertor(somInput, usdInput, euroInput)
@@ -123,17 +134,18 @@ const card = document.querySelector('.card')
 const btnPrev = document.querySelector('#btn-prev')
 const btnNext = document.querySelector('#btn-next')
 let  currentCardId = 1 
-
-const updateCard = (cardId) => {
-    fetch(`https://jsonplaceholder.typicode.com/todos/${cardId}`)
-    .then(response => response.json())
-    .then(data => {
+const updateCard = async(userId) => {
+    try{
+        const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${userId}`)
+        const data = await response.json()
         card.innerHTML = `
-        <p>${data.title}</p>
-        <p style="color:${data.completed ? 'green' : 'red'}">${data.completed}</p>
-        <span>${data.id}</span>
-    `
-})
+            <p>${data.title}</p>
+            <p style="color:${data.completed ? 'green' : 'red'}">${data.completed}</p>
+            <span>${data.id}</span>
+        `
+    }catch(error){
+        console.log('error')
+    }
 }
 btnNext.onclick = () => {
     currentCardId = currentCardId < 200 ? currentCardId + 1 : 1
@@ -146,6 +158,25 @@ btnPrev.onclick = () => {
 }
 updateCard(currentCardId)
 
-fetch('https://jsonplaceholder.typicode.com/posts')
-.then(response => response.json())
-.then(data => console.log(data))
+// fetch('https://jsonplaceholder.typicode.com/posts')
+// .then(response => response.json())
+// .then(data => console.log(data))
+
+//whether
+const citySearchInput = document.querySelector('.cityName')
+const cityName = document.querySelector('.city')
+const tempName = document.querySelector('.temp')
+const BASE_URL = 'http://api.openweathermap.org/data/2.5/weather'
+const API_ID = 'e417df62e04d3b1b111abeab19cea714'
+
+const citySearch = () => {
+    citySearchInput.oninput = async(event) =>{
+        const response = await fetch(`${BASE_URL}?q=${event.target.value}&appid=${API_ID}`)
+        const data = await response.json()       
+            cityName.innerHTML = data.name || 'City is not defaided'
+            tempName.innerHTML = data.main?.temp ? Math.round(data.main?.temp - 273) + '&deg;' + 'C' : ''
+    }
+}
+
+citySearch()
+//otional chaining ?.
