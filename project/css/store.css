@@ -1,0 +1,40 @@
+.store {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 20px;
+}
+.card_block {
+    width: 300px;
+    height: 300px;
+    border: 1px solid var(--orange);
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+}
+.card_block:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.card_block img{
+    width: 200px;
+    height: 150px;
+    object-fit: contain;
+}
+.card_block p{
+    color: var(--orange);
+    font-size: 14px;
+    margin-bottom: 10px
+}
+.card_block h3{
+    color:var(--orange);
+    font-size: 18px;
+}
+

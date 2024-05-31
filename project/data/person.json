@@ -1,0 +1,149 @@
+[
+    {
+        "GOD": [
+            {
+                "name": "Тор",
+                "color_hair": "Красный",
+                "color_eyes": "Чёрный",
+                "hair_length": "По пах",
+                "name_japan": "トール",
+                "panteon": "Scandinav",
+                "weapon": "Молот пробуждённый",
+                "person_photo": "https://w.forfun.com/fetch/11/110c4e98695d57bd29e73ef079e7d928.jpeg"
+            },
+            {
+                "name": "Зевс",
+                "color_hair": "Белый",
+                "color_eyes": "Чёрный",
+                "hair_length": "До шеи",
+                "name_japan": "ゼウス",
+                "panteon": "Greek",
+                "weapon": "Кулаки",
+                "person_photo": "https://lh3.googleusercontent.com/proxy/QLTjqNViKEKClpL44B1XfXpLj42tynXJ_IwCrzoUxlc8nbntaKxuYZEYJetqZJ3YmAMwwQ7RnhI9Xpn6O6sYBm6XvYc"
+            },
+            {
+                "name": "Посейдон",
+                "color_hair": "Блонд",
+                "color_eyes": "Желтый",
+                "hair_length": "До талии",
+                "name_japan": "ポセイドン",
+                "panteon": "Greek",
+                "weapon": "Трезубец",
+                "person_photo": "https://i.pinimg.com/736x/32/9b/73/329b73d527506436244c87adeda96d21.jpg"
+            },
+            {
+                "name": "Геракл",
+                "color_hair": "Оранжевый",
+                "color_eyes": "Чёрный",
+                "hair_length": "До шеи",
+                "name_japan": "ヘラクレス",
+                "panteon": "Greek",
+                "weapon": "Дубина,12 Подвигов Геракла",
+                "person_photo": "https://shikimori.one/system/characters/original/178248.jpg"
+            },
+            {
+                "name": "Зерофуку",
+                "color_hair": "Многоцветный",
+                "color_eyes": "Красно-Жёлтый",
+                "hair_length": "До шеи",
+                "name_japan": "ヘラクレス",
+                "panteon": "Буддизм, Даосизм, Cинтоизм,  Индуизм",
+                "weapon": "Пистолет,Большой молот,меч,посох,мешок",
+                "person_photo": "https://pikuco.ru/upload/test_stable/723/723fe569f327fe4a7a6ae6b722b95dcd.webp"
+            },
+            {
+                "name": "Хаджун,Papiyas",
+                "color_hair": "Синий",
+                "color_eyes": "Жёлтый",
+                "hair_length": "По колено",
+                "name_japan": "波旬",
+                "panteon": "Демон шестого неба",
+                "weapon": "Топор Божества Несчастья",
+                "person_photo": "https://sun9-79.userapi.com/impg/EI35T02nEhSmGLiPukX4luiGl60O5HMzXiQASg/S-ThBHZyEU0.jpg?size=604x604&quality=96&sign=062954f38930ff4e968fce27062de2cd&c_uniq_tag=hDyvOVxe7XxA1xTd8kAzZozIHMutmIFJRBdz85BAoko&type=album"
+            },
+            {
+                "name": "Будда",
+                "color_hair": "Красный",
+                "color_eyes": "Голубой",
+                "hair_length": "Чуть ниже плеч",
+                "name_japan": "しゃか",
+                "panteon": "Буддизм",
+                "weapon": "Great Nirvana Sword",
+                "person_photo": "https://avatars.dzeninfra.ru/get-zen_doc/9213367/pub_6499c2c6815ac139bc49d176_6499d77a725d92398ccf6926/scale_1200"
+            },
+            {
+                "name": "Шива",
+                "color_hair": "Черный",
+                "color_eyes": "Синий",
+                "hair_length": "До ушей",
+                "name_japan": "シヴァ",
+                "panteon": "Индуизм",
+                "weapon": "Кулаки",
+                "person_photo": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dad33119-a439-4b9c-98e7-60ec7102d80a/dety8v6-2981025c-324c-49bc-9951-7367236a278a.png/v1/fill/w_900,h_1273,q_80,strp/god_shiva_shuumatsu_no_valkyrie_record_of_ragnarok_by_raitvisualworks_dety8v6-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI3MyIsInBhdGgiOiJcL2ZcL2RhZDMzMTE5LWE0MzktNGI5Yy05OGU3LTYwZWM3MTAyZDgwYVwvZGV0eTh2Ni0yOTgxMDI1Yy0zMjRjLTQ5YmMtOTk1MS03MzY3MjM2YTI3OGEucG5nIiwid2lkdGgiOiI8PTkwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.hFO9XCfOAMn2ui7O2zQ2sOvkvpkPkkg1MOfDBAyOX9I"
+            }
+        ]
+    },
+    {
+        "People": [
+            {
+                "name": "Люй Бу",
+                "color_hair": "Чёрный",
+                "color_eyes": "Карий",
+                "hair_length": "По пах",
+                "name_japan": "呂 布 奉先",
+                "country": "Китай 156 по 199 н. э.",
+                "weapon": "Аллебарда Ланг Я",
+                "person_photo": "https://avatars.dzeninfra.ru/get-zen_doc/5285564/pub_60ed619a528cff4cb6171a56_60ed7727370d5a792e44c7b0/scale_1200"
+            },
+            {
+                "name": "Адам,Fail№.00000000001",
+                "color_hair": "Блонд",
+                "color_eyes": "Голубой",
+                "hair_length": "До ушей",
+                "name_japan": "アダム",
+                "country": "Рай",
+                "weapon": "Кастеты",
+                "person_photo": "https://static.wikia.nocookie.net/anime-characters-fight/images/e/ee/%D0%90%D0%B4%D0%B0%D0%BC%D1%87%D0%B8%D0%BA34.png/revision/latest?cb=20210604174057&path-prefix=ru"
+            },
+            {
+                "name": "Кодзиро Сасаки,History's Greatest Loser",
+                "color_hair": "Белый",
+                "color_eyes": "Чёрный",
+                "hair_length": "До ушей",
+                "name_japan": "佐々木 小次郎",
+                "country": "Япония конец-16-го начала 17-го века.",
+                "weapon": "Сушильный шест и два меча",
+                "person_photo": "https://desu.shikimori.one/system/user_images/original/843796/2544276.jpg"
+            },
+            {
+                "name": "Райдэн Тамээмон",
+                "color_hair": "Блонд",
+                "hair_length": "Короткие волосы",
+                "name_japan": "雷電 爲右エ門",
+                "country": "Япония",
+                "weapon": "Руки",
+                "person_photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAkLnkgx-mhEwi7Moflyj2aEaOoW4kWcn6z_pFukNZpg&s"
+            },
+            {
+                "name": "Цинь Шихуанди,Король королей,First Emperor of Qin",
+                "color_hair": "Коричневый",
+                "color_eyes": "Зелёный",
+                "hair_length": "Короткие волосы",
+                "name_japan": "秦始皇",
+                "country": "Китай",
+                "weapon": "Dragon Spear",
+                "person_photo": "https://static1.dualshockersimages.com/wordpress/wp-content/uploads/2023/07/untitled-design-2023-07-25t104818-263.jpg"
+            },
+            {
+                "name": "Джек-потрошитель",
+                "color_hair": "Черный",
+                "color_eyes": "Чёрный,Красный",
+                "hair_length": "До ушей",
+                "name_japan": "切り裂きジャック",
+                "country": "England,London",
+                "weapon": "Перчатки",
+                "person_photo": "https://w.forfun.com/fetch/98/98deeba10ca8c974b2480e01763fe05a.jpeg"
+            }
+        ]
+    }
+]
